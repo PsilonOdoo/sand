@@ -1,3 +1,2 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_horeca_purchase_purchase_requisition,horeca_purchase.purchase_requisition,model_purchase_requisition,base.group_user,1,1,1,1
-access_horeca_inherit_purchase_order,horeca_purchase.purchase_order,model_purchase_order,base.group_user,1,1,1,1
