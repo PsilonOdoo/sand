@@ -15,6 +15,7 @@ class PurchaseRequisition(models.Model):
          'Name of the purchase must be unique!')
     ]
 
+    name = fields.Char(readonly=False)
     month = fields.Char()
     week = fields.Char()
     afix = fields.Char()
