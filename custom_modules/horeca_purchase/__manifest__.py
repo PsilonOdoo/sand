@@ -6,7 +6,7 @@
         Horeca Inherited Purchase Module""",
 
     'description': """
-        Long description
+        Long Description about module
     """,
 
     'author': "My Company",
