@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "horeca_purchase",
+    'name': "horeca_contacts",
 
     'summary': """
-        Horeca Inherited Purchase Module""",
+        Horeca Inherited Custom Contacts""",
 
     'description': """
-        Long description of module's purpose
+        Horeca Contacts have added prefix
     """,
 
     'author': "My Company",
@@ -19,9 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['purchase',
-                'purchase_requisition',
-                'contacts'],
+    'depends': ['base', 'mail'],
 
     # always loaded
     'data': [

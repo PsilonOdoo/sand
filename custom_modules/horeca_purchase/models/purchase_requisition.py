@@ -14,11 +14,15 @@ class PurchaseRequisition(models.Model):
          'Name of the purchase must be unique!')
     ]
 
-    @api.onchange("vendor_id", "x_studio_month", "x_studio_week", "x_studio_afix")
+    month = fields.Char()
+    week = fields.Char()
+    afix = fields.Char()
+
+    @api.onchange("vendor_id", "month", "week", "afix")
     def _onchange_compute_name(self):
-        if self.x_studio_month and int(self.x_studio_month) < self.date_order.month and int(self.x_studio_month) != 0:
+        if self.month and int(self.month) < self.date_order.month and int(self.month) != 0:
             year = str(self.date_order.year + 1)[-2:]
         else:
             year = str(self.date_order.year)[-2:]
 
-        self.name = f'{self.vendor.x_studio_numbering_prefix_1}-{year}/{self.x_studio_month}/{self.x_studio_week}/{self.x_studio_afix}'
+        self.name = f'{self.vendor_id.prefix}-{year}/{self.month}/{self.week}/{self.afix}'
