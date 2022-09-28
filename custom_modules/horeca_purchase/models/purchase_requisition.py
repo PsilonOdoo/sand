@@ -2,6 +2,7 @@
 import random
 
 from odoo import models, fields, api
+import datetime
 
 
 class PurchaseRequisition(models.Model):
@@ -20,9 +21,12 @@ class PurchaseRequisition(models.Model):
 
     @api.onchange("vendor_id", "month", "week", "afix")
     def _onchange_compute_name(self):
-        if self.month and int(self.month) < self.date_order.month and int(self.month) != 0:
-            year = str(self.date_order.year + 1)[-2:]
+        today = datetime.datetime.now()
+        m = today.month
+        y = today.year
+        if self.month and int(self.month) < m and int(self.month) != 0:
+            year = str(y + 1)[-2:]
         else:
-            year = str(self.date_order.year)[-2:]
+            year = str(y)[-2:]
 
         self.name = f'{self.vendor_id.prefix}-{year}/{self.month}/{self.week}/{self.afix}'
