@@ -16,8 +16,20 @@ class PurchaseRequisition(models.Model):
     ]
 
     name = fields.Char(readonly=False)
-    month = fields.Char()
-    week = fields.Char()
+    month = fields.Selection(
+        selection=[('01', '01'),
+                   ('02', '02'),
+                   ('03', '03'),
+                   ('04', '04'),
+                   ('05', '05')]
+    )
+    week = fields.Selection(
+        selection=[('01', '01'),
+                   ('02', '02'),
+                   ('03', '03'),
+                   ('04', '04'),
+                   ('05', '05')]
+    )
     afix = fields.Char()
 
     @api.onchange("vendor_id", "month", "week", "afix")
