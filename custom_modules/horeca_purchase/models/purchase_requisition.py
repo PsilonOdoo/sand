@@ -17,6 +17,7 @@ class PurchaseRequisition(models.Model):
 
     name = fields.Char(readonly=False)
     month = fields.Selection(
+        string='Month',
         selection=[('01', '01'),
                    ('02', '02'),
                    ('03', '03'),
@@ -24,6 +25,7 @@ class PurchaseRequisition(models.Model):
                    ('05', '05')]
     )
     week = fields.Selection(
+        string='Week',
         selection=[('01', '01'),
                    ('02', '02'),
                    ('03', '03'),
