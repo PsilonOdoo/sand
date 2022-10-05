@@ -9,6 +9,10 @@
                 <xpath expr="//field[@name='name']" position="replace">
                     <field name="name" readonly="0"/>
                 </xpath>
+                <xpath expr="//field[@name='schedule_date']" position="after">
+                    <field name="month"/>
+                    <field name="week"/>
+                </xpath>
             </field>
         </record>
 
