@@ -27,6 +27,7 @@
     'data': [
         'security/ir.model.access.csv',
         'views/inherit_purchase_order.xml',
+        'views/inherit_view_purchase_requisition_form.xml',
         'views/templates.xml',
     ],
     # only loaded in demonstration mode
