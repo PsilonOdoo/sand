@@ -1,0 +1,19 @@
+<odoo>
+    <data>
+        <record id="purchase_requisition_form_view_inherit" model="ir.ui.view">
+            <field name="name">purchase.requisition.inherited</field>
+            <field name="model">purchase.requisition</field>
+            <field name="inherit_id" ref="purchase_requisition.view_purchase_requisition_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="replace">
+                    <field name="name" readonly="0"/>
+                </xpath>
+                <xpath expr="//field[@name='schedule_date']" position="after">
+                    <field name="month"/>
+                    <field name="week"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
