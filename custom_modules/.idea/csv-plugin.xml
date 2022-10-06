@@ -3,6 +3,13 @@
   <component name="CsvFileAttributes">
     <option name="attributeMap">
       <map>
+        <entry key="C:\PROJECTS\Odoo\Odoo Source\odoo\addons\purchase_requisition_stock\security\ir.model.access.csv">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="\horeca_purchase\security\ir.model.access.csv">
           <value>
             <Attribute>
